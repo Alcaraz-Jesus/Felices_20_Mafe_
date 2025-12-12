@@ -3,32 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Feliz Cumpleaños! 🎂</title>
+    <title>¡Feliz Cumpleaños! 🌙</title>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Patrick+Hand&display=swap" rel="stylesheet">
 
     <style>
-        /* --- ESTILOS GENERALES (TEMA OSCURO / DARK ACADEMIA) --- */
+        /* --- ESTILOS GENERALES --- */
         body {
-            /* Fondo base: Verde Militar muy oscuro (casi negro) */
             background-color: #1a1f1a;
-            /* Texto principal: Blanco hueso (efecto pluma de gel) */
             color: #e0e0e0;
             font-family: 'Patrick Hand', cursive;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             text-align: center;
-            /* Textura sutil oscura */
             background-image: radial-gradient(#2a302a 1px, transparent 1px);
             background-size: 20px 20px;
+            overflow: hidden;
         }
 
-        /* --- ENCABEZADO --- */
+        /* --- PANTALLA DE BIENVENIDA --- */
+        #welcome-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #0f1115;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 1s ease;
+        }
+
+        /* Estilo para la caja de regalo */
+        #gift-trigger {
+            width: 250px;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            animation: float 3s ease-in-out infinite;
+            z-index: 2; /* Aseguramos que la caja esté por encima del fondo */
+        }
+
+        #gift-trigger:hover { transform: scale(1.05); }
+
+        /* --- NUEVO: ESTILO PARA SNOOPY VOLADOR --- */
+        #flying-snoopy {
+            position: fixed;
+            top: 15%; /* Aparecerá en la parte de arriba */
+            left: -50%; /* Empieza escondido afuera de la pantalla a la izquierda */
+            width: 300px; /* Ajusta el tamaño de Snoopy aquí */
+            z-index: 10000; /* Siempre encima de todo */
+            pointer-events: none; /* Para que no interfiera con clics */
+            display: none; /* Oculto al inicio */
+        }
+
+        /* Esta clase se agrega con JS para activar la animación */
+        .animate-flight {
+            display: block !important;
+            animation: flyAcross 4s linear forwards; /* Tarda 4 segundos en cruzar */
+        }
+
+        @keyframes flyAcross {
+            0% { left: -30%; transform: rotate(-5deg); }
+            100% { left: 120%; transform: rotate(5deg); } /* Termina afuera a la derecha */
+        }
+        /* ----------------------------------------- */
+
+        #welcome-screen p {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #b0b0b0;
+            opacity: 0.7;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* --- CONTENEDOR PRINCIPAL --- */
+        #main-content {
+            opacity: 0;
+            transition: opacity 1.5s ease;
+            padding: 20px;
+        }
+
+        /* --- HEADER --- */
         header {
             padding: 40px 20px;
             margin-bottom: 50px;
-            /* Fondo: Negro azulado */
             background: #0f1115;
-            /* Borde: Morado vibrante */
             border: 2px dashed #9d4edd;
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(157, 78, 221, 0.2);
@@ -36,12 +103,12 @@
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            margin-top: 20px;
         }
 
-        h1 {
+        h1.main-title {
             font-family: 'Dancing Script', cursive;
             font-size: 3.5em;
-            /* Gradiente en el texto: Morado a Azul */
             background: linear-gradient(to right, #c77dff, #90e0ef);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -49,31 +116,26 @@
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
-        p.subtitle { 
-            font-size: 1.4em; 
-            margin-top: 10px; 
-            color: #b0b0b0; /* Gris claro */
-        }
+        p.subtitle { font-size: 1.4em; margin-top: 10px; color: #b0b0b0; }
 
-        /* --- GALERÍA TIPO POLAROID --- */
+        /* --- GALERÍA --- */
         .gallery-container {
             max-width: 900px;
             margin: 0 auto;
             padding: 20px;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 50px; /* Más espacio para que respiren en la oscuridad */
+            gap: 50px;
         }
 
         .photo-card {
-            background: #dadada; /* Papel fotográfico blanco sucio */
+            background: #dadada;
             padding: 12px 12px 50px 12px;
             box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
             position: relative;
             transition: transform 0.3s ease, z-index 0s;
         }
 
-        /* Efecto de Cinta Adhesiva (Ahora Azul/Verde oscuro) */
         .photo-card::before {
             content: '';
             position: absolute;
@@ -81,64 +143,50 @@
             left: 35%;
             width: 30%;
             height: 30px;
-            /* Cinta azul grisácea semitransparente */
             background-color: rgba(69, 123, 157, 0.8); 
             transform: rotate(-3deg);
             z-index: 1;
             box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
 
-        /* Inclinaciones para realismo */
         .photo-card:nth-child(odd) { transform: rotate(2deg); }
         .photo-card:nth-child(even) { transform: rotate(-2deg); }
         
-        /* Hover: La foto se endereza y hace zoom */
         .photo-card:hover { 
             transform: scale(1.1) rotate(0deg) !important; 
             z-index: 10;
-            box-shadow: 0 0 20px rgba(157, 78, 221, 0.4); /* Resplandor morado */
+            box-shadow: 0 0 20px rgba(157, 78, 221, 0.4);
         }
 
-        /* --- AQUÍ ESTÁ EL CAMBIO DE IMAGEN QUE PEDISTE --- */
         .photo-card img {
             width: 100%;
             height: auto;
             border-radius: 2px;
-            /* Filtro Nostálgico Activado por defecto */
             filter: contrast(1.1) brightness(0.9) sepia(0.4) saturate(0.8);
             transition: filter 0.5s ease;
         }
 
-        /* Al pasar el mouse, la foto recobra vida */
         .photo-card:hover img {
             filter: contrast(1) brightness(1) sepia(0) saturate(1.1);
         }
 
-        /* El texto dentro de la polaroid debe ser oscuro (pluma negra sobre papel blanco) */
         .photo-card p { 
             margin-top: 15px; 
             font-weight: bold; 
-            color: #2b2b2b; /* Texto oscuro */
+            color: #2b2b2b;
             font-family: 'Patrick Hand', cursive;
         }
 
-        /* --- SECCIÓN DE MENSAJES (Papel Negro) --- */
+        /* --- MENSAJES --- */
         .messages-container {
             max-width: 700px;
             margin: 80px auto;
-            /* Fondo negro papel */
             background-color: #121212;
             padding: 40px;
             border: 1px solid #333;
             box-shadow: 0 4px 20px rgba(0,0,0,0.5);
             position: relative;
-            border-left: 4px solid #577590; /* Borde verde/azul militar */
-        }
-
-        .messages-container h2 {
-            color: #9d4edd; /* Título morado */
-            border-bottom: 1px dashed #555;
-            padding-bottom: 10px;
+            border-left: 4px solid #577590;
         }
 
         .friend-note {
@@ -147,85 +195,90 @@
             border-left: 2px solid #333;
         }
         
-        .friend-note p { 
-            font-size: 1.3em; 
-            color: #d1d1d1; 
-            font-style: italic;
-        }
-        
-        .friend-note strong { 
-            color: #48cae4; /* Firma en azul claro */
-            font-size: 1.1em; 
-        }
+        .friend-note p { font-size: 1.3em; color: #d1d1d1; font-style: italic; }
+        .friend-note strong { color: #48cae4; font-size: 1.1em; }
 
-        /* --- BOTÓN --- */
-        .music-btn {
-            display: inline-block;
-            margin: 40px 0;
-            padding: 15px 40px;
-            background-color: #240046; /* Morado muy oscuro */
-            color: #e0aaff; /* Texto lila */
-            text-decoration: none;
-            border: 1px solid #9d4edd;
-            border-radius: 5px;
-            font-size: 1.2em;
-            transition: all 0.3s ease;
-        }
-        .music-btn:hover { 
-            background-color: #3c096c; 
-            box-shadow: 0 0 15px rgba(157, 78, 221, 0.6);
-        }
-
-        footer { margin-top: 50px; opacity: 0.5; font-size: 0.8em; }
+        footer { margin-top: 50px; opacity: 0.5; font-size: 0.8em; margin-bottom: 20px; }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>¡Feliz Cumpleaños! 🌙</h1>
-        <p class="subtitle">Una colección de momentos para ti.</p>
-    </header>
+    <audio id="musica" loop>
+        <source src="Winter.mp3" type="audio/mpeg">
+    </audio>
 
-    <div class="gallery-container">
-        
-        <div class="photo-card">
-            <img src="foto1.jpg" alt="Recuerdo">
-            <p>Añade fecha o frase</p>
-        </div>
-
-        <div class="photo-card">
-            <img src="G1.png" alt="Recuerdo">
-            <p>Añade fecha o frase</p>
-        </div>
-
-        <div class="photo-card">
-            <img src="foto3.jpg" alt="Recuerdo">
-            <p>Añade fecha o frase</p>
-        </div>
-        
-        </div>
-
-    <div class="messages-container">
-        <h2>💌 Notas del grupo...</h2>
-        
-        <div class="friend-note">
-            <p>"Que este año sea tan genial como tú. ¡A celebrar!"</p>
-            <strong>- Amigo 1</strong>
-        </div>
-
-        <div class="friend-note">
-            <p>"Gracias por tantas risas nocturnas. Te queremos."</p>
-            <strong>- Amigo 2</strong>
-        </div>
+    <div id="welcome-screen">
+        <img id="gift-trigger" src="Gift Box2.gif" alt="Abrir regalo">
+        <p>Toca la caja para abrir tu sorpresa</p>
     </div>
 
-    <a href="#" class="music-btn" target="_blank">
-        🎵 Playlist
-    </a>
+    <img id="flying-snoopy" src="Snoopy.gif" alt="Snoopy volando">
 
-    <footer>
-        <p>Hecho con 💜 y código.</p>
-    </footer>
+    <div id="main-content">
+        <header>
+            <h1 class="main-title">¡Feliz Cumpleaños! 🌙</h1>
+            <p class="subtitle">Una colección de momentos especiales.</p>
+        </header>
+
+        <div class="gallery-container">
+            <div class="photo-card">
+                <img src="G1.png" alt="Recuerdo 1">
+                <p>Añade tu descripción</p>
+            </div>
+            </div>
+
+        <div class="messages-container">
+            <h2>💌 Notas del grupo...</h2>
+            <div class="friend-note">
+                <p>"Mensaje bonito..."</p>
+                <strong>- Amigo 1</strong>
+            </div>
+        </div>
+
+        <footer>
+            <p>Hecho con 💜 y código.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('gift-trigger').addEventListener('click', function() {
+            const giftImage = document.getElementById('gift-trigger');
+            const snoopy = document.getElementById('flying-snoopy'); // Seleccionamos al Snoopy oculto
+            const overlay = document.getElementById('welcome-screen');
+            const mainContent = document.getElementById('main-content');
+            const audio = document.getElementById('musica');
+            const textHint = overlay.querySelector('p');
+
+            // 1. Iniciamos música
+            audio.volume = 0.6;
+            audio.play().catch(e => console.log("Audio error:", e));
+
+            // 2. Ocultamos el texto y detenemos la animación de flotar de la caja
+            textHint.style.display = 'none';
+            giftImage.style.animation = 'none'; // La caja se queda quieta esperando
+
+            // 3. ¡LANZAMOS A SNOOPY!
+            // Le agregamos la clase CSS que hace que se mueva de izquierda a derecha
+            snoopy.classList.add('animate-flight');
+
+            // 4. ESPERAMOS A QUE SNOOPY CRUCE (4 SEGUNDOS)
+            // Este tiempo debe coincidir con los "4s" que pusimos en el CSS de .animate-flight
+            setTimeout(() => {
+                
+                // Una vez que Snoopy cruzó, hacemos la transición
+                overlay.style.opacity = '0'; // Desvanecer la pantalla negra
+                mainContent.style.opacity = '1'; // Mostrar fotos
+                document.body.style.overflow = 'auto'; // Permitir scroll
+
+                // Eliminamos la pantalla de bienvenida por completo
+                setTimeout(() => {
+                    overlay.style.display = 'none';
+                    snoopy.style.display = 'none'; // También quitamos a Snoopy para que no estorbe
+                }, 1000);
+
+            }, 4000); // Esperamos 4000ms (4 segundos)
+        });
+    </script>
 
 </body>
 </html>

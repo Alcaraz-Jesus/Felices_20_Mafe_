@@ -9,7 +9,7 @@
     <style>
         /* --- ESTILOS GENERALES --- */
         body {
-            background-color: #1a1f1a;
+            background-color: #1a1f1a; /* Verde militar casi negro */
             color: #e0e0e0;
             font-family: 'Patrick Hand', cursive;
             margin: 0;
@@ -29,10 +29,6 @@
             opacity: 0.9;
             filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));
         }
-        
-        <img src="https://media.giphy.com/media/Oj5MkUfa9yOSA/giphy.gif" 
-         class="sticker" 
-         style="top: 1050px; right: 80px; width: 90px; transform: rotate(0deg);">
 
         /* --- PANTALLA DE BIENVENIDA --- */
         #welcome-screen {
@@ -221,35 +217,27 @@
         }
 
         footer { margin-top: 50px; opacity: 0.5; font-size: 0.8em; margin-bottom: 20px; }
-    
-            /* --- ARREGLO PARA CELULARES (MEDIA QUERY) --- */
-            @media (max-width: 768px) {
+
+        /* --- ARREGLO PARA CELULARES (MEDIA QUERY) --- */
+        @media (max-width: 768px) {
             .sticker {
-            /* 1. TRAER AL FRENTE: Que se vean encima de las fotos */
-            z-index: 20 !important; 
-                
-            /* 2. HACERLOS PEQUEÑOS: Para que no tapen el texto importante */
-            width: 80px !important; 
-            opacity: 0.8 !important; /* Un poco más transparentes para leer a través de ellos */
-        }
-    
-              /* 3. AJUSTAR POSICIÓN: Pegarlos bien a las orillas */
-              /* Esto busca los stickers de la izquierda y los pega al borde */
-              img[style*="left"] { left: -10px !important; }
-                
-              /* Esto busca los stickers de la derecha y los pega al borde */
-              img[style*="right"] { right: -10px !important; }
+                z-index: 20 !important; 
+                width: 80px !important; 
+                opacity: 0.8 !important; 
+            }
+            img[style*="left"] { left: -10px !important; }
+            img[style*="right"] { right: -10px !important; }
         }
     </style>
 </head>
 <body>
 
     <audio id="musica" loop>
-        <source src="Winter.mp3" type="audio/mpeg">
+        <source src="cancion.mp3" type="audio/mpeg">
     </audio>
 
     <div id="welcome-screen">
-        <img id="gift-trigger" src="Gift Box2.gif" alt="Abrir regalo">
+        <img id="gift-trigger" src="GiftBox2.gif" alt="Abrir regalo">
         <p>Toca la caja para abrir tu sorpresa <3 </p>
     </div>
 
@@ -262,6 +250,10 @@
     <img src="Luffy5.gif" class="sticker" style="top: 1300px; left: 40px; width: 135px; transform: rotate(-5deg);">
 
     <img src="Snoopycora.gif" class="sticker" style="top: 1800px; right: 40px; width: 105px; transform: rotate(15deg);">
+
+    <img src="https://media.giphy.com/media/Oj5MkUfa9yOSA/giphy.gif" 
+         class="sticker" 
+         style="top: 1050px; right: 80px; width: 90px; transform: rotate(0deg);">
 
 
     <div id="main-content">
@@ -352,6 +344,3 @@
     </script>
 </body>
 </html>
-
-
-

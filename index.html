@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -361,6 +362,43 @@
             /* La rotamos más para que apunte mejor al centro */
             transform: rotate(-3deg);
         }
+    /* ===== FIX REAL PARA HEADER EN MÓVIL (SIN ROMPER PC) ===== */
+@media (max-width: 768px) {
+
+    /* 1. El envoltorio necesita altura para "contener" a las chicas */
+    .header-wrapper-completo {
+        min-height: 520px; /* espacio suficiente para título + snoopy */
+        margin-top: 40px;
+        margin-bottom: 80px;
+    }
+
+    /* 2. Las chicas deben reducirse MUCHO en móvil */
+    .pointing-girl {
+        height: 220px !important; /* clave */
+        bottom: -10px;
+        opacity: 0.9;
+        z-index: 1; /* detrás del texto */
+    }
+
+    .girl-left {
+        left: -30px;
+    }
+
+    .girl-right {
+        right: -30px;
+        height: 200px !important; /* aún más pequeña */
+        bottom: -15px;
+    }
+
+    /* 3. El texto debe quedar SIEMPRE encima */
+    .neon-layout,
+    .subtitle,
+    .header-date {
+        position: relative;
+        z-index: 5;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -493,14 +531,14 @@
                     <source src="hermanosoficiales.mp4" type="video/mp4">
                     Tu navegador no soporta videos.
                 </video>
-                <p>La primera vez que te dije hermanita</p>
+                <p>Un video especial 🎥</p>
             </div>
 
             <div class="note-card">
                 <div class="clip"></div>
-                <p>"Esa semana nos estuvieron preguntando si éramos hermanos y empezamos a decir que sí"</p>
-                <strong>- Lisiado</strong>
-                <img src="hermanos oficiales.mp4" class="mini-sticker">
+                <p>"Aquí va el mensaje del video..."</p>
+                <strong>- Amigo</strong>
+                <img src="..." class="mini-sticker">
             </div>
         </div>
 

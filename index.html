@@ -111,7 +111,7 @@
             font-size: 1.4em; 
             color: #c7aecf; /* Lila suave */
             margin-top: 25px;
-            font-family: 'Patrick Hand', cursive;
+            font-family: 'Dancing Script', cursive;
             text-shadow: 0 0 5px #d500f9;
         }
         .subtitle span { color: #00e676; text-shadow: 0 0 5px #00e676; } /* Estrellas verdes */
@@ -211,7 +211,7 @@
         
         .photo-card p {
             color: #222; margin-top: 8px;
-            font-weight: bold; font-family: 'Patrick Hand';
+            font-weight: bold; font-family: 'Patrick Hand', cursive;
             text-align: center; font-size: 1.1em; margin-bottom: 0;
         }
 
@@ -427,6 +427,40 @@ header {
     /* Ajuste de seguridad para la chica de la izquierda en pantallas muy angostas */
     .girl-left { left: -130px !important; }
 }
+/* --- FOTO FINAL GIGANTE --- */
+        .final-surprise-container {
+            text-align: center;      /* Centra todo lo que esté adentro */
+            margin-top: 100px;       /* Espacio arriba para separarlo del video */
+            margin-bottom: 50px;     /* Espacio abajo antes del footer */
+            padding: 0 20px;         /* Un poco de margen a los lados en celular */
+        }
+
+        .big-photo {
+            max-width: 100%;         /* Que no se salga de la pantalla en celular */
+            width: 600px;            /* Tamaño máximo en computadora (puedes subirlo a 800px si quieres) */
+            height: auto;            /* Mantiene la proporción */
+            border-radius: 15px;     /* Bordes redondeados suaves */
+            
+            /* Un borde delgado y un brillo morado para que combine con el tema */
+            border: 2px solid #e040fb;
+            box-shadow: 0 0 20px rgba(224, 64, 251, 0.4);
+            
+            transition: transform 0.3s ease; /* Efecto suave al pasar el mouse */
+        }
+
+        .big-photo:hover {
+            transform: scale(1.02);  /* Se agranda un poquitito al pasar el mouse */
+            box-shadow: 0 0 30px rgba(224, 64, 251, 0.8); /* Brilla más */
+        }
+        
+        .final-message {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2em;
+            color: #00e676;          /* Verde neón */
+            margin-top: 20px;
+            text-shadow: 0 0 5px #00e676;
+        }
+
   </style>
 </head>
 <body>
@@ -505,7 +539,7 @@ header {
                 </div>
                 <div class="note-card">
                     <div class="clip"></div>
-                    <p>"Te quiero mucho corazón de melon"</p>
+                    <p>"Te quiero mucho corazón de melón"</p>
                     <strong>- Astrid</strong>
                     <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHA1ZnB6ajlvdHZxazgwM2ZhMWE3M21qenNpbTM2cGJvZXY2NWdyeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/NxgjDYxluo0sRjHw80/giphy.gif" class="mini-sticker" style="width: 100px; right: -65px;">
                 </div>
@@ -519,7 +553,7 @@ header {
                 <div class="photo-card">
                     <div class="clip"></div>
                     <img src="Chicas Superpoderosas.jpeg" alt="Chicas">
-                    <p>Hola, no sé q poner pero me gusta el limón</p>
+                    <p>De mis fotos favoritas de las tres</p>
                 </div>
                 <div class="note-card">
                     <div class="clip"></div>
@@ -549,7 +583,118 @@ header {
             </div>
         </div>
 
+  
+         <div class="fairy-string-container">
+            <div class="fairy-string"></div>
+            <div class="light l1 purple"></div><div class="light l2 green"></div><div class="light l3 purple"></div><div class="light l4 green"></div>
+            <div class="hanging-items-wrapper">
+                <div class="photo-card">
+                    <div class="clip"></div>
+                    <img src="espejo.jpeg" alt="Emma">
+                    <p>Me gustó esta foto</p>
+                </div>
+                <div class="note-card">
+                    <div class="clip"></div>
+                    <p>"Bueno zam, aquí iba a otra frase tuya pero como ya no me dijiste nada solo diré que a quién se le ocurre echarle crema y limón a un tamal, osea se corta la crema no manches"</p>
+                    <strong>- Zam (Lisiado)</strong>
+                    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjMyaGJjM3JzMG54ZjB1ODY4YjM0ZWJlZnVkYnVuMzA5eW12djBqNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/ErSGTG65qORKo/giphy.gif" class="mini-sticker" style="width: 90px; right: -68px;">
+                </div>
+            </div>
+        </div>
+
         <div class="fairy-string-container">
+            <div class="fairy-string"></div>
+            <div class="light l1 green"></div><div class="light l2 purple"></div><div class="light l3 green"></div><div class="light l4 purple"></div>
+            <div class="hanging-items-wrapper">
+                <div class="photo-card">
+                    <div class="clip"></div>
+                    <img src="floresamarillas.jpeg" alt="Emma">
+                    <p>Día de flores amarillas</p>
+                </div>
+                <div class="note-card">
+                    <div class="clip"></div>
+                    <p>"Aún recuerdo cómo me miraban todos por traer los tres ramos"</p>
+                    <strong>- Emma</strong>
+                    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTRkdTNucWE1M2ZycGwybGMyZ3I1dmV0a3lzbDdwNXU2eXFqczd1dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/26mgiE2JE6VAVtMB98/giphy.gif" class="mini-sticker" style="width: 90px; right: -55px;">
+                </div>
+            </div>
+        </div>
+
+
+
+          <div class="fairy-string-container">
+            <div class="fairy-string"></div>
+            <div class="light l1 purple"></div><div class="light l2 green"></div><div class="light l3 purple"></div><div class="light l4 green"></div>
+            <div class="hanging-items-wrapper">
+                <div class="photo-card">
+                    <div class="clip"></div>
+                    <img src="hermanitoscancha.jpeg" alt="hermanos">
+                    <p>Entrenamiento en el salva</p>
+                </div>
+                <div class="note-card">
+                    <div class="clip"></div>
+                    <p>"Cuando todavía me servían las rodillas para ir a jugar y así"</p>
+                    <strong>- Lisiado</strong>
+                    <img src="https://media.giphy.com/media/t1j3KW8BXTzccCLdNb/giphy.gif" class="mini-sticker" style="width: 100px; right: -65px;">                
+                </div>
+            </div>
+        </div>
+
+         <div class="fairy-string-container">
+            <div class="fairy-string"></div>
+            <div class="light l1 green"></div><div class="light l2 purple"></div><div class="light l3 green"></div><div class="light l4 purple"></div>
+            <div class="hanging-items-wrapper">
+                <div class="photo-card">
+                    <div class="clip"></div>
+                    <img src="gym_1.jpeg" alt="Gym">
+                    <p>Día de gym</p>
+                </div>
+                <div class="note-card">
+                    <div class="clip"></div>
+                    <p>"Cuando quedábamos en una hora y las esperaba media hora"</p>
+                    <strong>- Zam</strong>
+                    <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbjk3bGhtYWo2OHQ4dnNpN29kZGczb2FwYXh5azB1dWl4Z3dscHkydyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/jUUAsl6GksJDOwv1bg/giphy.gif" class="mini-sticker" style="width: 80px; right: -55px;">
+                </div>
+            </div>
+        </div>
+
+            <div class="fairy-string-container">
+            <div class="fairy-string"></div>
+            <div class="light l1 purple"></div><div class="light l2 green"></div><div class="light l3 purple"></div><div class="light l4 green"></div>
+            <div class="hanging-items-wrapper">
+                <div class="photo-card">
+                    <div class="clip"></div>
+                    <img src="okmañana.jpeg" alt="Ok">
+                    <p>Aguuustoo </p>
+                </div>
+                <div class="note-card">
+                    <div class="clip"></div>
+                    <p>"Zam me obligó a poner esta JAJAJAJA (Ya no dejan descansar en el pasto...)"</p>
+                    <strong>- Lisiado</strong>
+                    <img src="https://media.giphy.com/media/t1j3KW8BXTzccCLdNb/giphy.gif" class="mini-sticker" style="width: 100px; right: -65px;">              
+                </div>
+            </div>
+        </div>
+
+         <div class="fairy-string-container">
+            <div class="fairy-string"></div>
+            <div class="light l1 green"></div><div class="light l2 purple"></div><div class="light l3 green"></div><div class="light l4 purple"></div>
+            <div class="hanging-items-wrapper">
+                <div class="photo-card">
+                    <div class="clip"></div>
+                    <img src="robandocamara.jpeg" alt="Gym">
+                    <p>Robando cámara</p>
+                </div>
+                <div class="note-card">
+                    <div class="clip"></div>
+                    <p>"Tengo más fotos de ti que de mí"</p>
+                    <strong>- Emma</strong>
+                    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjMyaGJjM3JzMG54ZjB1ODY4YjM0ZWJlZnVkYnVuMzA5eW12djBqNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/ErSGTG65qORKo/giphy.gif" class="mini-sticker" style="width: 90px; right: -68px;">
+                </div>
+            </div>
+        </div>
+
+            <div class="fairy-string-container"style="margin-bottom: 100px;">
             <div class="fairy-string"></div>
             <div class="light l1 purple"></div><div class="light l2 green"></div><div class="light l3 purple"></div><div class="light l4 green"></div>
             <div class="hanging-items-wrapper">
@@ -559,19 +704,405 @@ header {
                     <source src="hermanosoficiales.mp4" type="video/mp4">
                     Tu navegador no soporta videos.
                 </video>
-                <p>Un video especial 🎥</p>
+                <p> Primera vez que te dije "hermanita" </p>
             </div>
 
             <div class="note-card">
                 <div class="clip"></div>
-                <p>"Aquí va el mensaje del video..."</p>
-                <strong>- Amigo</strong>
-                <img src="..." class="mini-sticker">
+                <p>"Esa semana nos estuvieron preguntando si éramos hermanos y empecé a decir que sí JAJAJAJA "</p>
+                <strong>- Lisiado</strong>
+                    <img src="https://media.giphy.com/media/t1j3KW8BXTzccCLdNb/giphy.gif" class="mini-sticker" style="width: 100px; right: -65px;">                
+            </div>
+        </div> </div>
+
+           <div class="fairy-string-container">
+            <div class="fairy-string"></div>
+            <div class="light l1 green"></div><div class="light l2 purple"></div><div class="light l3 green"></div><div class="light l4 purple"></div>
+            <div class="hanging-items-wrapper">
+                <div class="photo-card">
+                    <div class="clip"></div>
+                    <img src="rodar.jpeg" alt="Ok">
+                    <p>El día que hiciste un salto de tigre </p>
+                </div>
+                <div class="note-card">
+                    <div class="clip"></div>
+                    <p>"No importa el día, siempre hay chance para rodadas y saltos, tqm"</p>
+                    <strong>- Iván</strong>
+                    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjMyaGJjM3JzMG54ZjB1ODY4YjM0ZWJlZnVkYnVuMzA5eW12djBqNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/ErSGTG65qORKo/giphy.gif" class="mini-sticker" style="width: 90px; right: -68px;">
+                </div>
             </div>
         </div>
 
+
+         <div class="fairy-string-container"style="margin-bottom: 140px;">
+            <div class="fairy-string"></div>
+            <div class="light l1 purple"></div><div class="light l2 green"></div><div class="light l3 purple"></div><div class="light l4 green"></div>
+            <div class="hanging-items-wrapper">
+            <div class="photo-card">
+                <div class="clip"></div>
+                <video controls style="width: 100%; border-radius: 2px;">
+                    <source src="playamute.mp4" type="video/mp4">
+                    Tu navegador no soporta videos.
+                </video>
+                <p> Blogsito de la playa 🎥</p>
+            </div>
+
+            <div class="note-card">
+                <div class="clip"></div>
+                <p>"Hasta glenda fue esa vez, quién sabe qué habrá sido de ella.... creo que terminó en el tec, pobrecita. En fin, en verano hay que ir otra veez."</p>
+                <strong>- Lisiado</strong>
+                    <img src="https://media.giphy.com/media/t1j3KW8BXTzccCLdNb/giphy.gif" class="mini-sticker" style="width: 100px; right: -65px;">              
+            </div>
+        </div></div>
+
+
+         <div class="fairy-string-container">
+            <div class="fairy-string"></div>
+            <div class="light l1 green"></div><div class="light l2 purple"></div><div class="light l3 green"></div><div class="light l4 purple"></div>
+            <div class="hanging-items-wrapper">
+                <div class="photo-card">
+                    <div class="clip"></div>
+                    <img src="milly.jpeg" alt="Gym">
+                    <p>Milly</p>
+                </div>
+                <div class="note-card">
+                    <div class="clip"></div>
+                    <p>"Woof woof, woof woof, woof, wuau wuau (para los que no saben inglés)." (Nota de lisiado: dice que te quiere mucho y que gracias por cuidarla tanto, la hacen sentir amada.)</p>
+                    <strong>- Milly</strong>
+                    <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGU1N2twYzFzdDNmbTY0aGxkeDFiZjljY3g1b3BvdTFzdXZrbHI4eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/eMnVkexwdtoqmCe4Xc/giphy.gif" class="mini-sticker" style="width: 80px; right: -65px;">
+                </div>
+            </div>
+        </div>
+
+        <div class="fairy-string-container">
+            <div class="fairy-string"></div>
+            <div class="light l1 purple"></div><div class="light l2 green"></div><div class="light l3 purple"></div><div class="light l4 green"></div>
+            <div class="hanging-items-wrapper">
+                <div class="photo-card">
+                    <div class="clip"></div>
+                    <img src="crepusculo.jpeg" alt="Crepúsculo">
+                    <p>Cuando las obligué a ver crepúsculo y se durmieron al inicio..</p>
+                </div>
+                <div class="note-card">
+                    <div class="clip"></div>
+                    <p>"Ahh pero el 4 de septiembre me preguntaste dónde veía crepúsculo...." (Nota de lisiado: con fecha y todo eh, creo que le caló)</p>
+                    <strong>- Zam</strong>
+                    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjMyaGJjM3JzMG54ZjB1ODY4YjM0ZWJlZnVkYnVuMzA5eW12djBqNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/ErSGTG65qORKo/giphy.gif" class="mini-sticker" style="width: 90px; right: -68px;">
+                </div>
+            </div>
+        </div>
+
+           <div class="fairy-string-container">
+            <div class="fairy-string"></div>
+            <div class="light l1 green"></div><div class="light l2 purple"></div><div class="light l3 green"></div><div class="light l4 purple"></div>
+            <div class="hanging-items-wrapper">
+                <div class="photo-card">
+                    <div class="clip"></div>
+                    <img src="hinata.jpeg" alt="Ok">
+                    <p>Uno de nuestros tantos domingos </p>
+                </div>
+                <div class="note-card">
+                    <div class="clip"></div>
+                    <p>"Ese día creo que Saúl te regaló al hinata y fuimos a la fokin comida china #YaBastaBrambila"</p>
+                    <strong>- Lisiado</strong>
+                    <img src="https://media.giphy.com/media/t1j3KW8BXTzccCLdNb/giphy.gif" class="mini-sticker" style="width: 100px; right: -65px;">                
+                </div>
+            </div>
+        </div>
+
+          <div class="fairy-string-container">
+            <div class="fairy-string"></div>
+            <div class="light l1 purple"></div><div class="light l2 green"></div><div class="light l3 purple"></div><div class="light l4 green"></div>
+            <div class="hanging-items-wrapper">
+                <div class="photo-card">
+                    <div class="clip"></div>
+                    <img src="recuerdo.jpeg" alt="Emma">
+                    <p>Recuerditos</p>
+                </div>
+                <div class="note-card">
+                    <div class="clip"></div>
+                    <p>"Estoy en cada recuerdo que guardas en tu cuarto"</p>
+                    <strong>- Emma</strong>
+                    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTRkdTNucWE1M2ZycGwybGMyZ3I1dmV0a3lzbDdwNXU2eXFqczd1dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/26mgiE2JE6VAVtMB98/giphy.gif" class="mini-sticker" style="width: 90px; right: -68px;">
+                </div>
+            </div>
+        </div>
+
+          <div class="fairy-string-container">
+            <div class="fairy-string"></div>
+            <div class="light l1 green"></div><div class="light l2 purple"></div><div class="light l3 green"></div><div class="light l4 purple"></div>
+            <div class="hanging-items-wrapper">
+                <div class="photo-card">
+                    <div class="clip"></div>
+                    <img src="posada.jpeg" alt="Ok">
+                    <p>Evento de la prepa </p>
+                </div>
+                <div class="note-card">
+                    <div class="clip"></div>
+                    <p>"Zam, era una frase por foto sabes? pero equis somos chavos, sabían que en mi primera tardeada me puse a leer un periódico JAJAJAJA"</p>
+                    <strong>- Zam (Lisiado)</strong>
+                    <img src="https://media.giphy.com/media/t1j3KW8BXTzccCLdNb/giphy.gif" class="mini-sticker" style="width: 100px; right: -65px;">               
+                </div>
+            </div>
+        </div>
+
+         <div class="fairy-string-container"style="margin-bottom: 140px;">
+            <div class="fairy-string"></div>
+            <div class="light l1 purple"></div><div class="light l2 green"></div><div class="light l3 purple"></div><div class="light l4 green"></div>
+            <div class="hanging-items-wrapper">
+            <div class="photo-card">
+                <div class="clip"></div>
+                <video controls style="width: 100%; border-radius: 2px;">
+                    <source src="peloteando.mp4" type="video/mp4">
+                    Tu navegador no soporta videos.
+                </video>
+                <p>Cuando me querías y me acompañabas a pelotear y así</p>
+            </div>
+
+            <div class="note-card">
+                <div class="clip"></div>
+                <p>"No hay mucho qué decir la vdd, pero podemos observar cómo sigues levantando el pie para rematar jajaja"</p>
+                <strong>- Lisiado</strong>
+                    <img src="https://media.giphy.com/media/t1j3KW8BXTzccCLdNb/giphy.gif" class="mini-sticker" style="width: 100px; right: -65px;">               
+            </div>
+        </div></div>
+
+        <div class="fairy-string-container">
+            <div class="fairy-string"></div>
+            <div class="light l1 green"></div><div class="light l2 purple"></div><div class="light l3 green"></div><div class="light l4 purple"></div>
+            <div class="hanging-items-wrapper">
+                <div class="photo-card">
+                    <div class="clip"></div>
+                    <img src="corcho.jpeg" alt="Ok">
+                    <p>Abrazo tuyo </p>
+                </div>
+                <div class="note-card">
+                    <div class="clip"></div>
+                    <p>"Para siempre llevarte conmigo"</p>
+                    <strong>- Emma</strong>
+                    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTRkdTNucWE1M2ZycGwybGMyZ3I1dmV0a3lzbDdwNXU2eXFqczd1dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/26mgiE2JE6VAVtMB98/giphy.gif" class="mini-sticker" style="width: 90px; right: -55px;">
+                </div>
+            </div>
+        </div>
+        
+            <div class="fairy-string-container">
+            <div class="fairy-string"></div>
+            <div class="light l1 purple"></div><div class="light l2 green"></div><div class="light l3 purple"></div><div class="light l4 green"></div>
+            <div class="hanging-items-wrapper">
+                <div class="photo-card">
+                    <div class="clip"></div>
+                    <img src="screamer.jpeg" alt="Ok">
+                    <p>No sé qué estaba pasando aquí pero me asusté(8 </p>
+                </div>
+                <div class="note-card">
+                    <div class="clip"></div>
+                    <p>"Yo creo que fue el día que subiste 'booo' a tus historias pq me asusté machín"</p>
+                    <strong>- Lisiado</strong>
+                    <img src="https://media.giphy.com/media/t1j3KW8BXTzccCLdNb/giphy.gif" class="mini-sticker" style="width: 100px; right: -65px;">              
+                </div>
+            </div>
+        </div>
+
+
+            <div class="fairy-string-container">
+            <div class="fairy-string"></div>
+            <div class="light l1 green"></div><div class="light l2 purple"></div><div class="light l3 green"></div><div class="light l4 purple"></div>
+            <div class="hanging-items-wrapper">
+                <div class="photo-card">
+                    <div class="clip"></div>
+                    <img src="minecraft.jpeg" alt="Gym">
+                    <p>Minecraft</p>
+                </div>
+                <div class="note-card">
+                    <div class="clip"></div>
+                    <p>"Las ratas se tomaron fotos con mi celular cuando les pedí que tomaran una de cuando saliera el título"</p>
+                    <strong>- Emma</strong>
+                    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTRkdTNucWE1M2ZycGwybGMyZ3I1dmV0a3lzbDdwNXU2eXFqczd1dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/26mgiE2JE6VAVtMB98/giphy.gif" class="mini-sticker" style="width: 90px; right: -55px;">
+                </div>
+            </div>
+        </div>
+
+            <div class="fairy-string-container">
+            <div class="fairy-string"></div>
+            <div class="light l1 purple"></div><div class="light l2 green"></div><div class="light l3 purple"></div><div class="light l4 green"></div>
+            <div class="hanging-items-wrapper">
+                <div class="photo-card">
+                    <div class="clip"></div>
+                    <img src="playa.jpeg" alt="Ok">
+                    <p>Playita</p>
+                </div>
+                <div class="note-card">
+                    <div class="clip"></div>
+                    <p>"Recuerdo que antes de esa foto me estaba peinando porque traía todo el cabello esponjado jajaja, pero nomás llegaste con el cel y posé"</p>
+                    <strong>- Lisiado</strong>
+                    <img src="https://media.giphy.com/media/t1j3KW8BXTzccCLdNb/giphy.gif" class="mini-sticker" style="width: 100px; right: -65px;">              
+                </div>
+            </div>
+        </div>
+
+         <div class="fairy-string-container">
+            <div class="fairy-string"></div>
+            <div class="light l1 green"></div><div class="light l2 purple"></div><div class="light l3 green"></div><div class="light l4 purple"></div>
+            <div class="hanging-items-wrapper">
+                <div class="photo-card">
+                    <div class="clip"></div>
+                    <img src="comida.jpeg" alt="Ok">
+                    <p>Tú comiendo espagueti y zama un sándwich</p>
+                </div>
+                <div class="note-card">
+                    <div class="clip"></div>
+                    <p>"Estaba muy buena la pizza" (Nota de Zam: te queda lindo el rojo)</p>
+                    <strong>- Emma</strong>
+                    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTRkdTNucWE1M2ZycGwybGMyZ3I1dmV0a3lzbDdwNXU2eXFqczd1dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/26mgiE2JE6VAVtMB98/giphy.gif" class="mini-sticker" style="width: 90px; right: -55px;">
+                </div>
+            </div>
+        </div>
+
+         <div class="fairy-string-container">
+            <div class="fairy-string"></div>
+            <div class="light l1 purple"></div><div class="light l2 green"></div><div class="light l3 purple"></div><div class="light l4 green"></div>
+            <div class="hanging-items-wrapper">
+                <div class="photo-card">
+                    <div class="clip"></div>
+                    <img src="playa21.jpeg" alt="Ok">
+                    <p>Más playita </p>
+                </div>
+                <div class="note-card">
+                    <div class="clip"></div>
+                    <p>"Aquí el q no pidió frase fui yo, acepto mi culpa, pero Ey, mejor prueba el pastel(:"</p>
+                    <strong>- Lisiado</strong>
+                    <img src="https://media.giphy.com/media/t1j3KW8BXTzccCLdNb/giphy.gif" class="mini-sticker" style="width: 100px; right: -65px;">                
+                </div>
+            </div>
+        </div>
+
+         <div class="fairy-string-container"style="margin-bottom: 100px;">
+            <div class="fairy-string"></div>
+            <div class="light l1 green"></div><div class="light l2 purple"></div><div class="light l3 green"></div><div class="light l4 purple"></div>
+            <div class="hanging-items-wrapper">
+            <div class="photo-card">
+                <div class="clip"></div>
+                <video controls style="width: 100%; border-radius: 2px;">
+                    <source src="millycomiendo_2.mp4" type="video/mp4">
+                    Tu navegador no soporta videos.
+                </video>
+                <p>Alimentándome🎥</p>
+            </div>
+
+            <div class="note-card">
+                <div class="clip"></div>
+                <p>"Cuando me diste una tortilla y me celebraste que no te arranqué la mano JAJAJAJA"</p>
+                <strong>- Milly</strong>
+                <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGU1N2twYzFzdDNmbTY0aGxkeDFiZjljY3g1b3BvdTFzdXZrbHI4eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/eMnVkexwdtoqmCe4Xc/giphy.gif" class="mini-sticker" style="width: 80px; right: -65px;">
+            </div>
+        </div></div>
+
+
+         <div class="fairy-string-container">
+            <div class="fairy-string"></div>
+            <div class="light l1 purple"></div><div class="light l2 green"></div><div class="light l3 purple"></div><div class="light l4 green"></div>
+            <div class="hanging-items-wrapper">
+                <div class="photo-card">
+                    <div class="clip"></div>
+                    <img src="hermanitoscoreanos.jpeg" alt="Ok">
+                    <p>Día al revés</p>
+                </div>
+                <div class="note-card">
+                    <div class="clip"></div>
+                    <p>"Yo me creía coreano y tú traías la lisiado skin JAJAJAJA" (veníamos de estudiar para el examen de la uni)</p>
+                    <strong>- Lisiado</strong>
+                    <img src="https://media.giphy.com/media/t1j3KW8BXTzccCLdNb/giphy.gif" class="mini-sticker" style="width: 100px; right: -65px;">             
+                </div>
+            </div>
+        </div>
+
+
+         <div class="fairy-string-container">
+            <div class="fairy-string"></div>
+            <div class="light l1 green"></div><div class="light l2 purple"></div><div class="light l3 green"></div><div class="light l4 purple"></div>
+            <div class="hanging-items-wrapper">
+                <div class="photo-card">
+                    <div class="clip"></div>
+                    <img src="salva.jpeg" alt="Ok">
+                    <p>Domingo de reunión </p>
+                </div>
+                <div class="note-card">
+                    <div class="clip"></div>
+                    <p>"Para este entonces ya era raro poder estar varios en el salva al mismo tiempo y este día nos pudimos juntar al menos los de la foto"</p>
+                    <strong>- Lisiado</strong>
+                    <img src="https://media.giphy.com/media/t1j3KW8BXTzccCLdNb/giphy.gif" class="mini-sticker" style="width: 100px; right: -65px;">              
+                </div>
+            </div>
+        </div>
+
+
+        <div class="fairy-string-container">
+            <div class="fairy-string"></div>
+            <div class="light l1 purple"></div><div class="light l2 green"></div><div class="light l3 purple"></div><div class="light l4 green"></div>
+            <div class="hanging-items-wrapper">
+                <div class="photo-card">
+                    <div class="clip"></div>
+                    <img src="playatodos.jpeg" alt="Ok">
+                    <p>Más playaaa todavía, es que estuvo muy padre ese día la vdd </p>
+                </div>
+                <div class="note-card">
+                    <div class="clip"></div>
+                    <p>"Ahora sí una foto de todos de la 2da vez q fuimos"</p>
+                    <strong>- Lisiado</strong>
+                    <img src="https://media.giphy.com/media/t1j3KW8BXTzccCLdNb/giphy.gif" class="mini-sticker" style="width: 100px; right: -65px;">            
+                </div>
+            </div>
+        </div>
+
+        <div class="fairy-string-container">
+            <div class="fairy-string"></div>
+            <div class="light l1 green"></div><div class="light l2 purple"></div><div class="light l3 green"></div><div class="light l4 purple"></div>
+            <div class="hanging-items-wrapper">
+                <div class="photo-card">
+                    <div class="clip"></div>
+                    <img src="hermanitos.jpeg" alt="Ok">
+                    <p>Uno de nuestros días en la uni </p>
+                </div>
+                <div class="note-card">
+                    <div class="clip"></div>
+                    <p>"Aquí sí parecemos hermanos JAJAJA" (Por favor adóptenme, quiero ir a vietnam y así)</p>
+                    <strong>- Lisiado</strong>
+                    <img src="https://media.giphy.com/media/t1j3KW8BXTzccCLdNb/giphy.gif" class="mini-sticker" style="width: 100px; right: -65px;">               
+                </div>
+            </div>
+        </div>
+
+         <div class="fairy-string-container"style="margin-bottom: 140px;">
+            <div class="fairy-string"></div>
+            <div class="light l1 purple"></div><div class="light l2 green"></div><div class="light l3 purple"></div><div class="light l4 green"></div>
+            <div class="hanging-items-wrapper">
+            <div class="photo-card">
+                <div class="clip"></div>
+                <video controls style="width: 100%; border-radius: 2px;">
+                    <source src="dia0.mp4" type="video/mp4">
+                    Tu navegador no soporta videos.
+                </video>
+                <p> 16/12/2023 - El día que te conocí 🫶🏾</p>
+            </div>
+
+            <div class="note-card">
+                <div class="clip"></div>
+                <p>"Bueno, también conocí a Astrid y a Zam, pero no es su cumpleaños. Esta es la única evidencia que tengo de ese día, mas no el único recuerdo; ese y muchos más los llevo en el corazón. TQM"</p>
+                <strong>- Lisiado</strong>
+                    <img src="https://media.giphy.com/media/t1j3KW8BXTzccCLdNb/giphy.gif" class="mini-sticker" style="width: 100px; right: -65px;">                </div>
+            </div>
+        </div></div>
+
+        <div class="final-surprise-container">
+            <p class="final-message">y Recuerda....</p>
+
+            <img src="nadie.png" alt="Final" class="big-photo">
+            <p class="final-message"> Somos Nakamas ✨</p>
+        </div>
+</div>
+
         <footer>
-            <p>Hecho con 💜 para ti.</p>
+            <p>Hecho con cariño para María Fernanda Sánchez Cruz 💜, de parte de todos los que te queremos🫂</p>
         </footer>
     </div>
 
